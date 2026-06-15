@@ -1,0 +1,159 @@
+# Test multiple times effect of factor on Hill diversity with different rarefaction even depth
+
+**\[experimental\]**
+
+This reduce the risk of a random drawing of an exceptional situation of
+an unique rarefaction. For each of `nperm` rarefactions to even depth
+(using
+[`MiscMetabar::rarefy_even_depth_pq()`](https://adrientaudiere.github.io/MiscMetabar/reference/rarefy_even_depth_pq.html)),
+the effect of `fact` on each Hill number is tested with
+[`ggstatsplot::ggbetweenstats()`](https://www.indrapatil.com/ggstatsplot/reference/ggbetweenstats.html).
+
+## Usage
+
+``` r
+hill_test_rarperm_pq(
+  physeq,
+  fact,
+  q = c(0, 1, 2),
+  nperm = 99,
+  sample.size = min(phyloseq::sample_sums(physeq)),
+  verbose = FALSE,
+  progress_bar = TRUE,
+  p_val_signif = 0.05,
+  type = "nonparametric",
+  ...
+)
+```
+
+## Arguments
+
+- physeq:
+
+  (required) A
+  [`phyloseq-class`](https://rdrr.io/pkg/phyloseq/man/phyloseq-class.html)
+  object obtained using the `phyloseq` package.
+
+- fact:
+
+  (required) Name of the factor in `physeq@sam_data` used to plot
+  different lines.
+
+- q:
+
+  (a vector of integer) The list of q values to compute the hill number
+  H^q. If Null, no hill number are computed. Default value compute the
+  Hill number 0 (Species richness), the Hill number 1 (exponential of
+  Shannon Index) and the Hill number 2 (inverse of Simpson Index). Hill
+  numbers are more appropriate in DNA metabarcoding studies when `q > 0`
+  (Alberdi & Gilbert, 2019; Calderón-Sanou et al., 2019).
+
+- nperm:
+
+  (int) The number of permutations to perform.
+
+- sample.size:
+
+  (int) A single integer value equal to the number of reads being
+  simulated, also known as the depth. See
+  [`phyloseq::rarefy_even_depth()`](https://rdrr.io/pkg/phyloseq/man/rarefy_even_depth.html)
+  and
+  [`MiscMetabar::rarefy_even_depth_pq()`](https://adrientaudiere.github.io/MiscMetabar/reference/rarefy_even_depth_pq.html).
+
+- verbose:
+
+  (logical). If TRUE, print additional information.
+
+- progress_bar:
+
+  (logical, default TRUE) Do we print progress during the calculation?
+
+- p_val_signif:
+
+  (float, `[0:1]`) The minimum value of p-value to count a test as
+  significant in the `prop_signif` result.
+
+- type:
+
+  A character specifying the type of statistical approach (See
+  [`ggstatsplot::ggbetweenstats()`](https://www.indrapatil.com/ggstatsplot/reference/ggbetweenstats.html)
+  for more details):
+
+  - "parametric"
+
+  - "nonparametric"
+
+  - "robust"
+
+  - "bayes"
+
+- ...:
+
+  Additional arguments passed on to
+  [`ggstatsplot::ggbetweenstats()`](https://www.indrapatil.com/ggstatsplot/reference/ggbetweenstats.html)
+  function.
+
+## Value
+
+A list of 6 components :
+
+- method
+
+- expressions
+
+- plots
+
+- pvals
+
+- prop_signif
+
+- statistics
+
+## References
+
+Alberdi, A., & Gilbert, M. T. P. (2019). A guide to the application of
+Hill numbers to DNA-based diversity analyses. *Molecular Ecology
+Resources*.
+[doi:10.1111/1755-0998.13014](https://doi.org/10.1111/1755-0998.13014)
+
+Calderón-Sanou, I., Münkemüller, T., Boyer, F., Zinger, L., & Thuiller,
+W. (2019). From environmental DNA sequences to ecological conclusions:
+How strong is the influence of methodological choices? *Journal of
+Biogeography*, 47.
+[doi:10.1111/jbi.13681](https://doi.org/10.1111/jbi.13681)
+
+## See also
+
+[`ggstatsplot::ggbetweenstats()`](https://www.indrapatil.com/ggstatsplot/reference/ggbetweenstats.html),
+[`MiscMetabar::hill_pq()`](https://adrientaudiere.github.io/MiscMetabar/reference/hill_pq.html),
+[`adonis_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/adonis_rarperm_pq.md),
+[`var_par_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/var_par_rarperm_pq.md)
+
+## Author
+
+Adrien Taudière
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+if (requireNamespace("ggstatsplot")) {
+  hill_test_rarperm_pq(data_fungi, "Time", nperm = 3)
+  res <- hill_test_rarperm_pq(data_fungi, "Height",
+    nperm = 3,
+    p_val_signif = 0.9
+  )
+  patchwork::wrap_plots(res$plots[[1]])
+  res$plots[[1]][[1]] + res$plots[[2]][[1]] + res$plots[[3]][[1]]
+  res$prop_signif
+  res_para <- hill_test_rarperm_pq(data_fungi, "Height",
+    nperm = 3,
+    type = "parametric"
+  )
+  res_para$plots[[1]][[1]] + res_para$plots[[2]][[1]] + res_para$plots[[3]][[1]]
+  res_para$pvals
+  res_para$method
+  res_para$expressions[[1]]
+}
+} # }
+```

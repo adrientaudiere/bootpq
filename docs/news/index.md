@@ -1,0 +1,22 @@
+# Changelog
+
+## bootpq 0.0.0.9000
+
+- Initial development version of the package, providing bootstrapping by
+  rarefaction permutations for ‘phyloseq’ objects.
+- Add a “Get started with bootpq” vignette and a pkgdown website
+  skeleton.
+- [`adonis_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/adonis_rarperm_pq.md)
+  computes PERMANOVA (via
+  [`MiscMetabar::adonis_pq()`](https://adrientaudiere.github.io/MiscMetabar/reference/adonis_pq.html))
+  across many rarefaction permutations and summarizes the results as
+  mean and quantiles, migrated from ‘MiscMetabar’.
+- [`hill_test_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/hill_test_rarperm_pq.md)
+  tests the effect of a factor on Hill numbers across many rarefaction
+  permutations using
+  [`ggstatsplot::ggbetweenstats()`](https://www.indrapatil.com/ggstatsplot/reference/ggbetweenstats.html),
+  migrated from ‘MiscMetabar’.
+- [`var_par_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/var_par_rarperm_pq.md)
+  partitions the variation of a ‘phyloseq’ object across many
+  rarefaction permutations, averaging adjusted R squared and reporting
+  quantiles, migrated from ‘MiscMetabar’.
