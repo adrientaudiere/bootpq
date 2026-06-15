@@ -1,0 +1,39 @@
+Package: bootpq
+Title: Bootstrapping by Rarefaction Permutations for 'phyloseq' Objects
+Version: 0.0.0.9000
+Authors@R:
+    person("Adrien", "Taudière", , "adrien.taudiere@zaclys.net", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0003-1088-1182"))
+Description: Bootstrapping tools for 'phyloseq' objects based on
+    repeated rarefaction to even sequencing depth. Statistical analyses
+    (PERMANOVA, Hill-number group tests, and variation partitioning) are
+    computed across many rarefaction permutations, each with a different
+    random seed, and summarized to reduce the risk of drawing conclusions
+    from a single, possibly atypical, rarefaction. Part of the 'pqverse'
+    ecosystem and built on top of 'MiscMetabar'.
+License: MIT + file LICENSE
+URL: https://adrientaudiere.github.io/bootpq/,
+    https://github.com/adrientaudiere/bootpq
+BugReports: https://github.com/adrientaudiere/bootpq/issues
+Depends:
+    MiscMetabar,
+    phyloseq,
+    R (>= 4.1.0)
+Imports:
+    cli,
+    lifecycle,
+    stats,
+    utils
+Suggests:
+    ggstatsplot,
+    knitr,
+    patchwork,
+    rmarkdown,
+    testthat (>= 3.0.0),
+    vegan
+Config/testthat/edition: 3
+Encoding: UTF-8
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+RdMacros: lifecycle
+Config/roxygen2/version: 8.0.0

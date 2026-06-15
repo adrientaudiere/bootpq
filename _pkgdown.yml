@@ -1,0 +1,18 @@
+url: https://adrientaudiere.github.io/bootpq/
+template:
+  bootstrap: 5
+  bslib:
+    bg: "#d5ecec"
+    fg: "#124444"
+    primary: "#63450f"
+    secondary: "#3e135a"
+
+reference:
+- title: Bootstrapping by rarefaction permutations
+  desc: >
+    Run statistical analyses across many rarefaction permutations of a
+    phyloseq object and summarise the results.
+  contents:
+  - adonis_rarperm_pq
+  - hill_test_rarperm_pq
+  - var_par_rarperm_pq
