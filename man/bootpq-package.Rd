@@ -6,6 +6,8 @@
 \alias{bootpq-package}
 \title{bootpq: Bootstrapping by Rarefaction Permutations for 'phyloseq' Objects}
 \description{
+\if{html}{\figure{logo.svg}{options: style='float: right' alt='logo' width='120'}}
+
 Bootstrapping tools for 'phyloseq' objects based on repeated rarefaction to even sequencing depth. Statistical analyses (PERMANOVA, Hill-number group tests, and variation partitioning) are computed across many rarefaction permutations, each with a different random seed, and summarized to reduce the risk of drawing conclusions from a single, possibly atypical, rarefaction. Part of the 'pqverse' ecosystem and built on top of 'MiscMetabar'.
 }
 \seealso{
