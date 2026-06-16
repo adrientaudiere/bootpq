@@ -12,7 +12,7 @@ Description: Bootstrapping tools for 'phyloseq' objects based on
     from a single, possibly atypical, rarefaction. Part of the 'pqverse'
     ecosystem and built on top of 'MiscMetabar'.
 License: AGPL-3
-URL: https://adrientaudiere.github.io/bootpq/,
+URL: https://adrientaudiere.github.io/bootpq/, 
     https://github.com/adrientaudiere/bootpq
 BugReports: https://github.com/adrientaudiere/bootpq/issues
 Depends:
