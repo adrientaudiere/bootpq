@@ -2,10 +2,10 @@ url: https://adrientaudiere.github.io/bootpq/
 template:
   bootstrap: 5
   bslib:
-    bg: "#d5ecec"
-    fg: "#124444"
-    primary: "#63450f"
-    secondary: "#3e135a"
+    bg: "#D5ECDA"
+    fg: "#290731"
+    primary: "#5A134E"
+    secondary: "#63450f"
 
 reference:
 - title: Bootstrapping by rarefaction permutations
