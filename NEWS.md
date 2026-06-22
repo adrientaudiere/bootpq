@@ -1,5 +1,4 @@
-# bootpq 0.0.0 (development version)
-
+# bootpq 0.0.0
 * Initial development version of the package, providing bootstrapping by rarefaction permutations for 'phyloseq' objects.
 * Add a "Get started with bootpq" vignette and a pkgdown website skeleton.
 * `adonis_rarperm_pq()` computes PERMANOVA (via `MiscMetabar::adonis_pq()`) across many rarefaction permutations and summarizes the results as mean and quantiles, migrated from 'MiscMetabar'.
