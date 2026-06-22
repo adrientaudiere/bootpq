@@ -1,3 +1,5 @@
+# bootpq 0.1.0 (Development version)
+
 # bootpq 0.0.0
 * Initial development version of the package, providing bootstrapping by rarefaction permutations for 'phyloseq' objects.
 * Add a "Get started with bootpq" vignette and a pkgdown website skeleton.
