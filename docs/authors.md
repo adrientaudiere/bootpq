@@ -11,13 +11,13 @@ Source:
 [`DESCRIPTION`](https://github.com/adrientaudiere/bootpq/blob/HEAD/DESCRIPTION)
 
 Taudière A (2026). *bootpq: Bootstrapping by Rarefaction Permutations
-for 'phyloseq' Objects*. R package version 0.0.0.9000,
+for 'phyloseq' Objects*. R package version 0.1.0.9000,
 <https://adrientaudiere.github.io/bootpq/>.
 
     @Manual{,
       title = {bootpq: Bootstrapping by Rarefaction Permutations for 'phyloseq' Objects},
       author = {Adrien Taudière},
       year = {2026},
-      note = {R package version 0.0.0.9000},
+      note = {R package version 0.1.0.9000},
       url = {https://adrientaudiere.github.io/bootpq/},
     }

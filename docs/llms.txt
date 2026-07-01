@@ -16,23 +16,21 @@ ecosystem and builds on top of
 You can install the development version of `bootpq` from GitHub with:
 
 ``` r
-
 # install.packages("remotes")
 remotes::install_github("adrientaudiere/bootpq")
 ```
 
 ## Functions
 
-| Function | Description |
-|----|----|
-| [`adonis_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/adonis_rarperm_pq.md) | PERMANOVA across rarefaction permutations |
+| Function                                                                                              | Description                                             |
+|-------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| [`adonis_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/adonis_rarperm_pq.md)       | PERMANOVA across rarefaction permutations               |
 | [`hill_test_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/hill_test_rarperm_pq.md) | Hill-number group tests across rarefaction permutations |
-| [`var_par_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/var_par_rarperm_pq.md) | Variation partitioning across rarefaction permutations |
+| [`var_par_rarperm_pq()`](https://adrientaudiere.github.io/bootpq/reference/var_par_rarperm_pq.md)     | Variation partitioning across rarefaction permutations  |
 
 ## Example
 
 ``` r
-
 library(bootpq)
 library(MiscMetabar)
 data(data_fungi_mini)
