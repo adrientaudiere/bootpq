@@ -6,6 +6,9 @@ template:
     fg: "#290731"
     primary: "#5A134E"
     secondary: "#63450f"
+    base_font: "Fira Mono, monospace"
+    heading_font: "Fira Sans, sans-serif"
+    code_font: "Fira Code, monospace"
 
 reference:
 - title: Bootstrapping by rarefaction permutations
