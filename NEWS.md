@@ -1,5 +1,7 @@
 # bootpq 0.1.0 (Development version)
 
+* Fix missing `Remotes` field in `DESCRIPTION` so that `pak::pkg_install()` can resolve the GitHub-only dependency `MiscMetabar` when installing bootpq standalone.
+
 # bootpq 0.0.0
 * Initial development version of the package, providing bootstrapping by rarefaction permutations for 'phyloseq' objects.
 * Add a "Get started with bootpq" vignette and a pkgdown website skeleton.
