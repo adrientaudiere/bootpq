@@ -2,6 +2,11 @@
 
 ## bootpq 0.1.0 (Development version)
 
+- Fix missing `Remotes` field in `DESCRIPTION` so that
+  [`pak::pkg_install()`](https://pak.r-lib.org/reference/pkg_install.html)
+  can resolve the GitHub-only dependency `MiscMetabar` when installing
+  bootpq standalone.
+
 ## bootpq 0.0.0
 
 - Initial development version of the package, providing bootstrapping by
