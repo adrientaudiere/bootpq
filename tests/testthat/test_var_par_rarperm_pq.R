@@ -1,6 +1,6 @@
 skip_on_cran()
 library(MiscMetabar)
-data(data_fungi_mini)
+
 
 test_that("var_par_rarperm_pq averages adjusted R squared across permutations", {
   skip_if_not_installed("vegan")

@@ -1,6 +1,6 @@
 skip_on_cran()
 library(MiscMetabar)
-data(data_fungi_mini)
+
 
 balanced_height_pq <- function(physeq, n = 6) {
   sd <- as(phyloseq::sample_data(physeq), "data.frame")

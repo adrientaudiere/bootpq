@@ -1,6 +1,6 @@
 skip_on_cran()
 library(MiscMetabar)
-data(data_fungi_mini)
+
 
 test_that("adonis_rarperm_pq summarises adonis across permutations", {
   skip_if_not_installed("vegan")
