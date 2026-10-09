@@ -1,6 +1,5 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- devtools::build_readme() -->
 
 # bootpq <img src="man/figures/logo.png" align="right" height="138" alt="" />
@@ -33,11 +32,11 @@ remotes::install_github("adrientaudiere/bootpq")
 
 ## Functions
 
-| Function | Description |
-|----|----|
-| `adonis_rarperm_pq()` | PERMANOVA across rarefaction permutations |
+| Function                 | Description                                             |
+|--------------------------|---------------------------------------------------------|
+| `adonis_rarperm_pq()`    | PERMANOVA across rarefaction permutations               |
 | `hill_test_rarperm_pq()` | Hill-number group tests across rarefaction permutations |
-| `var_par_rarperm_pq()` | Variation partitioning across rarefaction permutations |
+| `var_par_rarperm_pq()`   | Variation partitioning across rarefaction permutations  |
 
 ## Example
 
