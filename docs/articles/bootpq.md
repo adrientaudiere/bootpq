@@ -20,7 +20,6 @@ ecosystem and builds on
 ## Installation
 
 ``` r
-
 # install.packages("remotes")
 remotes::install_github("adrientaudiere/bootpq")
 ```
@@ -31,7 +30,6 @@ We use `data_fungi_mini`, a small fungal metabarcoding dataset shipped
 with `MiscMetabar`. We first drop samples with missing covariates.
 
 ``` r
-
 library(bootpq)
 library(MiscMetabar)
 data(data_fungi_mini)
@@ -58,7 +56,6 @@ keep `nperm` small here so the vignette builds quickly; in practice use
 the default (`nperm = 99`) or more.
 
 ``` r
-
 res <- adonis_rarperm_pq(
   data_fungi_woNA,
   "Time*Height",
@@ -114,7 +111,6 @@ across rarefaction permutations. It relies on `ggstatsplot`, so the
 chunk below is shown but not run during the vignette build.
 
 ``` r
-
 hill_test_rarperm_pq(data_fungi_woNA, fact = "Height", nperm = 99)
 ```
 
@@ -126,7 +122,6 @@ summarising how much variation each set of explanatory variables
 explains.
 
 ``` r
-
 var_par_rarperm_pq(
   data_fungi_woNA,
   list_component = list(
