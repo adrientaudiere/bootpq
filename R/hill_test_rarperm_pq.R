@@ -64,24 +64,12 @@
 #'   strong is the influence of methodological choices? *Journal of Biogeography*,
 #'   47. \doi{10.1111/jbi.13681}
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' if (requireNamespace("ggstatsplot")) {
-#'   hill_test_rarperm_pq(data_fungi, "Time", nperm = 3)
-#'   res <- hill_test_rarperm_pq(data_fungi, "Height",
-#'     nperm = 3,
-#'     p_val_signif = 0.9
-#'   )
-#'   patchwork::wrap_plots(res$plots[[1]])
-#'   res$plots[[1]][[1]] + res$plots[[2]][[1]] + res$plots[[3]][[1]]
+#'   d <- subset_samples(data_fungi, !is.na(Height))
+#'   d <- prune_samples(sample_names(d)[1:60], d)
+#'   res <- hill_test_rarperm_pq(d, "Height", nperm = 2)
 #'   res$prop_signif
-#'   res_para <- hill_test_rarperm_pq(data_fungi, "Height",
-#'     nperm = 3,
-#'     type = "parametric"
-#'   )
-#'   res_para$plots[[1]][[1]] + res_para$plots[[2]][[1]] + res_para$plots[[3]][[1]]
-#'   res_para$pvals
-#'   res_para$method
-#'   res_para$expressions[[1]]
 #' }
 #' }
 hill_test_rarperm_pq <- function(

@@ -85,10 +85,8 @@ if (requireNamespace("vegan")) {
     nperm = 2,
     dbrda_computation = TRUE
   )
+  MiscMetabar::plot_var_part_pq(res_var_2)
 }
-}
-\dontrun{
-MiscMetabar::plot_var_part_pq(res_var_2)
 }
 }
 \seealso{

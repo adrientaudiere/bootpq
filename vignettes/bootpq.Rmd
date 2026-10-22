@@ -105,7 +105,7 @@ var_par_rarperm_pq(
 
 ## Where to go next
 
-- The [function reference](../reference/index.html) documents every argument,
+- The [function reference](https://adrientaudiere.github.io/bootpq/reference/index.html) documents every argument,
   including how to control the rarefaction depth (`sample.size`) and the
   quantiles reported (`quantile_prob`).
 - `bootpq` works on any `phyloseq` object, so the same workflow applies to your
